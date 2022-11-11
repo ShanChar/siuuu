@@ -1,0 +1,74 @@
+#include <stdio.h>
+int main()
+{
+	int n, plate,total, discount,final;
+	printf("Enter 1 for Momo\nEnter 2 for Pizza\nEnter 3 for Burger\n");
+	scanf("%d", &n);
+	
+	switch (n)
+	{
+		
+		case 1:
+			printf("Enter how many plates of momo do you want");
+			scanf("%d", &plate);
+			if (plate >= 3)
+			{
+				total = plate * 100;
+				discount = 15 * total / 100;
+				total = total - discount;
+				printf("%Your order is being delivered and your total with 15 percent discount is %d ", total);
+			}
+			else if (plate < 3)
+			{
+				total = plate * 100;
+				printf("%Your order is being delivered and your total is %d ", total);
+				
+			}
+			
+			break;
+			
+			case 2:
+			printf("Enter how many plates of Pizza do you want");
+			scanf("%d", &plate);
+			if (plate >= 3)
+			{
+				total = plate * 500;
+				discount = 30 * total / 100;
+				total = total - discount;
+				printf("%Your order is being delivered and your total with 30 percent discount is %d ", total);
+			}
+			else if (plate < 3)
+			{
+				total = plate * 500;
+				printf("%Your order is being delivered and your total is %d ", total);
+				
+			}
+			break;
+			
+			case 3:
+			printf("Enter how many plates of burger do you want");
+			scanf("%d", &plate);
+			if (plate >= 3)
+			{
+				total = plate * 150;
+				discount = 20 * total / 100;
+				total = total - discount;
+				printf("%Your order is being delivered and your total with 20 percent discount is %d ", total);
+			}
+			else if (plate < 3)
+			{
+				total = plate * 150;
+				printf("%Your order is being delivered and your total is %d ", total);
+				
+			}
+			
+			break;
+			
+			default:
+				printf("Please enter a valid order");
+	return 0;
+			
+		
+	}
+	return 0;
+}
